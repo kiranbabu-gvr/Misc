@@ -1,0 +1,32 @@
+1.	Project		: Straight Through Services(STS)
+Client         	: Standard Chartered Bank, UK
+Technologies	: Java, Spring, Tomcat 7, Maven, Apache Camel, PL/SQL, Web services.
+Duration           : Apr 2017 – Till Date
+Description 	: 
+ STS Offers customers with a fast convenient and Integrated e-Payment solution that addresses payable needs in making payments of any type and currency, bothdomestic and cross border. This solution is used by over 30000 customers across 34 countries by leading the way in Asia, Africa and Middle East. STS improves efficiency in customers account payables process by consolidating multiple transaction types destined for multiple clearing zones and countries.is a payment module application deal with corporate customers of Standard Chartered Bank. CPWB is an utility to support cheque printing of its various customers across globe. 
+
+The multiple transaction types STS supports are
+?	Cheques includes
+1.	Local Bank cheques
+2.	International Bank Cheques
+3.	Corporate Cheques
+?	Fund transfer includes
+1.	Payroll Solutions
+2.	Local Low Value/high value bank transfers(ACH/RTGS)
+3.	Overseas telegraphic transfer(OTT)
+4.	Book Transfer(BT) within SCB
+STS reduces paperwork, Streamlines approval, improves reconciliation and enhances security and control.STS can be integrated with customers local and wide area networks.
+Payments can be sent to bank securely through a channel of customers choice.
+?	Offline channel with a workstation in your premises
+?	Online channel using web
+?	Uploading of payment files from customers own ERP system.
+
+Roles:            	
+?	Requirement Analysis
+?	Impact Analysis and Effort estimation
+?	Provide design alternatives
+?	Provide quick resolution to end user concerns
+?	Perform dev integration testing
+?	Developing Jasper Reports.
+?	Support users on Cheque printing issues.
+?	Responsible for bug fixing and test support
