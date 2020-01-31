@@ -1,0 +1,343 @@
+Agile:
+----------------------------------------------
+Team: Product Owner, Scrum master, Dev Team.
+Team Size: 5 to 6 people(1- product owner, 1 Scrum master, 3 or 4 developers).
+
+The Product Owner:
+	Often an executive or key stakeholder, the Product Owner has a vision for the end product and a sense of how it will fit into the
+company’s long-term goals. This person will need to direct communication efforts, alerting the team to major developments and stepping
+in to course-correct and implement high-level changes as necessary.
+Roles:
+	Defining the vision. 
+	Managing the product backlog. 
+	Prioritizing needs. 
+	Overseeing development stages. 
+	Anticipating client needs. 
+	Acting as primary liaison. 
+	Evaluating product progress at each iteration.
+	
+The Scrum Master:
+	The Scrum Master is most akin to a project manager. They are guardians of process, givers of feedback, and mentors to junior team members.
+They oversee day-to-day functions, maintain the Scrum board, check in with team members, and make sure tasks are being completed on target.
+Roles:
+	Clearing obstacles
+	Establishing an environment where the team can be effective addressing team dynamics
+	Ensuring a good relationship between the team and product owner as well as others outside the team
+	Protecting the team from outside interruptions and distractions.
+	
+The Team Member: 
+	Team members are the makers: front- and back-end engineers, copywriters, designers, videographers, you name it. 
+Team members have varied roles and skills but all are responsible for getting stuff done on time and in excellent quality.
+
+Backlog: Client requirements devided into story points and prioritized
+
+Story point: a unit of measure for estimate of the overall effort that will be required to fully implement a product backlog item.
+1 point: usually 1 day or 8 hrs.
+
+Sprint planning session: 1 day discussion before sprint start.
+Asssigning story points to backlog items.
+
+Sprint: Ideally 2 weeks but can be 3 or 4 weeks.
+15 ponits for sprint of 3 weeks.
+
+Stand up call: 15 min.Scrum master will do. Developers will talk.
+Explain the progress and report obstacles.
+
+Retrospective call:
+After each sprint on how the last sprint progressed.
+Any changes to be incorporated.
+
+JIRA: Project management tool to track the Sprint progress.
+Burdown chart used for review progress
+
+Sprint Zero: Pre planning process for activities done before first sprint starts.
+
+Epic: Is simply a story, but is considered so large that it needs to be broken down into multiple stories
+
+
+SQL:
+---------------------------------------------
+cartesian product?
+Function vs procedure?
+what is trigger?
+self join?
+groupby function?
+
+Rest:
+----------------------------------------------
+In Rest, how do i maintain security?
+In production, i want to maintain authentication for rest service which should not expire and can be used loong time?
+cusomized logic in filter.
+Diff between put and post?
+Uploading image in rest what method should use, get, put or post. - mime types - image url
+There are two tables called employee and address.One service will get the employee details and without second service call usig empid i want to get address details.
+idempotent?
+
+xml, json, text
+light weight no end tags
+token- jwt ssh256
+status codes
+200, 201, 204
+400
+500
+custom codes
+
+less security
+no client side validation
+auth in env, data in body
+
+update- not memory efficient
+patch- to update few fields in key value.
+
+query parametrer, header parametre, coockies handling
+
+1. Rest vs SOAP?
+SOAP is a protocal
+Uses Service Interface to expose its functionality
+SOAP allows only XML data format.
+adv:
+---------------
+Client side validation
+security - auth in env, data in body
+
+Rest is an architectural style
+Rest uses Uniform resource locators to access
+Rest allows several data formats JSON, Text, XML..
+adv:
+-----------
+less band width
+faster
+
+2.Difference between Spring MVC vs Spring Rest(Controller vs Rest controller)
+	In Spring framework, a Controller is a class which is responsible for preparing a model Map with data to be displayed by 
+the view as well as choosing the right view itself. It can also directly write into response stream by using @ResponseBody 
+annotation and complete the request.
+	The behavior of writing directly into response stream is very useful for responding calls to RESTful web services
+because there we just return data instead of returning a view.
+
+3. @RestController
+	@Controller + @ResponseBody
+4. What id filter?
+	Filter is used to execute action before reaching controller.
+5. How to maintain security in REST?
+	Using JWT Token mechanism.
+	First client sends username/pwd to get token. Next token will be placed in second request to get service.
+6. In production, i want to maintain authentication for rest service which should not expire and can be used loong time?
+	Use filter to validate date.
+7. Diff between put and post?
+	Put - is for update
+	Post -  is for creation
+	Patch - more effiicient way of update
+8. Uploading image in rest what method should use, get, put or post.
+	- mime types - image url
+	- for storage create id with the imagepath and store in db.
+9. idempotent?
+	making multiple identical requests has the same effect as making a single request – then that REST API is called idempotent.
+	POST is NOT idempotent.
+	GET, PUT, DELETE, HEAD, OPTIONS and TRACE are idempotent.
+10. Response codes?
+	200 - 
+	201 - 
+	
+	400 - 
+	
+	
+	500 -
+	
+	servlets
+	filters 
+	listeners- application start and application stop, - ex:context loader listener
+	filter preprocessing - site blocking, authentication,
+	filter postprocess
+	
+Programs:
+---------------
+Febinossi
+factorial
+prime number
+first non repeated number in array
+
+Java8:
+-------------------------------------
+functional interface in java8?
+sequencial and parallel streams?
+why we need lamda expression?
+diff b/w normal foreach and streams?
+
+Collection ->  group of objects
+Stream - > to process objects from the collection
+
+java.util.Stream;
+
+Stream can be used whereever collection are there - not only collections, where ever group of elements or arrays are there
+Biggest advantage of Java8: Consize code - moving from object oriented to functional programming like Python, Ruby, Scala
+Stream()
+filter
+map
+collect
+count
+sorted
+min
+max
+forEach
+toArray
+
+Default methods were introduced to provide backward compatibility for old interfaces so that they can have new methods without effecting existing code.
+
+A functional interface is an interface that contains only one abstract method. They can have only one functionality to exhibit. From Java 8 onwards, lambda expressions can be used to represent the instance of a functional interface. A functional interface can have any number of default methods.
+
+class Test 
+{ 
+    public static void main(String args[]) 
+    { 
+        // create anonymous inner class object 
+        new Thread(new Runnable() 
+        { 
+            @Override
+            public void run() 
+            { 
+                System.out.println("New thread created"); 
+            } 
+        }).start(); 
+    } 
+} 
+
+class Test 
+{ 
+  public static void main(String args[]) 
+  { 
+  
+    // lambda expression to create the object 
+    new Thread(()-> 
+       {System.out.println("New thread created");}).start(); 
+  } 
+} 
+
+@FunctionalInterface Annotation
+@FunctionalInterface annotation is used to ensure that the functional interface can’t have more than one abstract method.
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class ForEachConsumer {
+	public static void main(String[] args) {
+		List<Integer> numList = new ArrayList<Integer>();
+		for(int i=0; i<100;i++){
+			numList.add(i);
+		}
+		
+		//numList.forEach(new MyConsumer<>());
+		
+		numList.parallelStream().filter(n -> (n>90 & n<95)).forEach(n -> System.out.println(n));
+		
+		//numList.stream().filter(n -> n>90).forEach(n -> System.out.print(n));
+		
+		List<Integer> filterList = numList.parallelStream().filter(n -> n>90).collect(Collectors.toList());
+		System.out.println(filterList);
+		
+		List<Integer> filterList1 = numList.parallelStream().map(n -> n+5).collect(Collectors.toList());
+		System.out.println(filterList1);
+		
+		System.out.println(numList.stream().filter(m-> m<35).count());
+		
+		//natural sorting - Comparable -> i1.compareTo(i2)
+		List<Integer> sortedList = numList.parallelStream().sorted().collect(Collectors.toList());
+		System.out.println(sortedList);
+		
+		//customized sorting -> compare(i1,i2)
+		List<Integer> sortedListDesc = numList.parallelStream().sorted((i1,i2)-> (i1<i2)?1:(i1>i2)?-1:0).collect(Collectors.toList());
+		System.out.println(sortedListDesc);
+		
+		List<Integer> sortedList1 = numList.parallelStream().sorted((i1,i2)-> -i1.compareTo(i2)).collect(Collectors.toList());
+		System.out.println(sortedList1);
+		List<Integer> sortedList2 = numList.parallelStream().sorted((i1,i2)-> i2.compareTo(i1)).collect(Collectors.toList());
+		System.out.println(sortedList2);
+		
+		Integer min = numList.parallelStream().min((i1,i2)-> i1.compareTo(i2)).get();
+		System.out.println(min);
+		Integer max = numList.parallelStream().max((i1,i2)-> i1.compareTo(i2)).get();
+		System.out.println(max);
+		
+		Integer[] array = numList.stream().toArray(Integer[]::new);
+		System.out.println("array:");
+		for(Integer value: array){
+			System.out.print(value);
+		}
+		
+		Stream.of(array).forEach(System.out::println);
+		
+		Arrays.asList(array).forEach(System.out::print);
+		
+		Stream<Integer> s = Stream.of(9,99,999,9999,9999);
+		s.forEach(System.out::println);
+		
+		//() -> {System.out.println("name");};
+		 
+		}
+
+}
+
+
+Hibernate:
+-------------------------------------
+What is hibernate?
+Advantages of hibernate?
+Basic interfaces in hibernate?
+First and second level cache?
+Why need of second level cache as first level cache is available?
+Hibernate pagination?
+Save us persist vs saveorupdate?
+update vs merge?
+evict?
+cascade?
+Hibenate mapping?
+Fetching strategies?
+caching strategies?
+hibernate transaction management?
+dirty checking?
+
+Git:
+-------------------------------------
+Open Jenkins dashboard.
+Install Git and Maven plugins
+Configure Java, Maven, Git
+Provide git repository url and branch name.
+Build - to create artifact.
+Deploy: Groovy script to deploy - using rundeck
+
+Core Java:
+---------------------------------------------
+Singleton pattern without syncronization?
+which collection give values in ascending order while iterating key and values.
+Notify and wait methods?
+If wait() and notify() were on the Thread instead then each thread would have to know the status of every other thread. How would thread1 know that thread2 was waiting
+ for access to a particular resource? 
+can i deploy ear in web server.
+min, max and avg element from collection?
+hash code and equals method?
+internal mechanisam of hastable and hashmap?
+why string is immutable?
+why wait, notify and notify all in object class?
+use of serialversionid?
+exceptions in overloading and overriding?
+can i inject an interface?
+what is preferable abstract class or interface?
+abstract classes allow non-static and non-final fields and allow methods to be public, private, or protected 
+while interfaces' fields are inherently public, static, and final, and all interface methods are inherently public
+why string class is made final?
+stringbuffer vs string builder?
+hashtable vs concurrenthashmap?
+
+equals and hashcode?
+In Strings :
+	equals- it will check the content of strings
+	hashcode - checks hashcode value of Strings
+Objects:
+	equals - Checks is both references pointing same object - in case of not overriding equals method.
+	hashcode - checks hashcode value of objects
+
+why wait, notify and notifyall on object class?
+If they are on thread class - no way to intimate other threads on status
